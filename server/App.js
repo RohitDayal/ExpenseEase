@@ -10,7 +10,7 @@ const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 const { MongoClient, ServerApiVersion } = require("mongodb");
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({ credentials: true, origin: "https://expense2-emf0.onrender.com" }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.json());
