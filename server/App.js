@@ -49,7 +49,7 @@ async function run() {
 }
 run().catch(console.dir);
 
-app.post("/register", async (req, res) => {
+app.post("https://ease-dmsl.onrender.com/register", async (req, res) => {
   const { name, password, mail } = req.body;
   // var name=req.body.userName;
   // console.log(req.body);
@@ -66,7 +66,7 @@ app.post("/register", async (req, res) => {
   }
 });
 
-app.post("/login", async (req, res) => {
+app.post("https://ease-dmsl.onrender.com/login", async (req, res) => {
   const { mail, password } = req.body;
   const userDoc = await User.findOne({ mail });
   // console.log(req.body);
@@ -96,7 +96,7 @@ app.post("/login", async (req, res) => {
     res.status(400).json("User not found");
   }
 });
-app.get("/profile", (req, res) => {
+app.get("https://ease-dmsl.onrender.com/profile", (req, res) => {
   const { token } = req.cookies;
   jwt.verify(token, secret, {}, (err, info) => {
     if (err) throw err;
@@ -104,7 +104,7 @@ app.get("/profile", (req, res) => {
     res.json(info);
   });
 });
-app.post("/friend", async (req, res) => {
+app.post("https://ease-dmsl.onrender.com/friend", async (req, res) => {
   const { mail2, mail, owe } = req.body;
   // var temp = owe;
 
@@ -132,7 +132,7 @@ app.post("/friend", async (req, res) => {
   // }
 });
 
-app.post("/findfriend", async (req, res) => {
+app.post("https://ease-dmsl.onrender.com/findfriend", async (req, res) => {
   const { mail2 } = req.body;
   const mail = mail2;
 
@@ -148,7 +148,7 @@ app.post("/findfriend", async (req, res) => {
     res.send("no problem");
   }
 });
-app.post("/history", async (req, res) => {
+app.post("https://ease-dmsl.onrender.com/history", async (req, res) => {
   const { mail2 } = req.body;
 
   Friend2.find({ mail2: mail2 }).then((data) => {
