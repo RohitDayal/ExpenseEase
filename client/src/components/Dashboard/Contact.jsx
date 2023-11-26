@@ -15,31 +15,6 @@ const Contact = () => {
   const [backenddata2, setBackend2] = useState([]);
   const [isOwnedClicked, setOwnedClicked] = useState(false);
   const [isHistoryClicked, setHistoryClicked] = useState(false);
-useEffect(() => {
-  // Call history function when the component mounts
-  history({ preventDefault: () => {} }); // pass a dummy event object
-
-  // Set up an interval to periodically call the history function
-  const intervalId = setInterval(() => {
-    history({ preventDefault: () => {} }); // pass a dummy event object
-  }, 5000); // Update every 30 seconds, adjust the interval as needed
-  
-
-  // Clean up the interval when the component is unmounted
-  return () => clearInterval(intervalId);
-}, []);
-useEffect(() => {
-  // Call history function when the component mounts
-  find({ preventDefault: () => {} }); // pass a dummy event object
-
-  // Set up an interval to periodically call the history function
-  const intervalId = setInterval(() => {
-    history({ preventDefault: () => {} }); // pass a dummy event object
-  }, 5000); // Update every 30 seconds, adjust the interval as needed
-
-  // Clean up the interval when the component is unmounted
-  return () => clearInterval(intervalId);
-}, []);
 
 
   useEffect(() => {
