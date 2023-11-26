@@ -11,7 +11,7 @@ export default function LoginForm() {
   async function login(ev) {
     console.log("hello");
     ev.preventDefault();
-    const response = await fetch("http://localhost:5000/login", {
+    const response = await fetch("https://ease-dmsl.onrender.com/login", {
       method: "POST",
       body: JSON.stringify({ mail, password }),
       headers: { "Content-Type": "application/json" },
