@@ -43,7 +43,7 @@ useEffect(() => {
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/profile", {
+    fetch("https://ease-dmsl.onrender.com/profile", {
       credentials: "include",
     }).then((response) => {
       response.json().then((userInfo) => {
@@ -58,7 +58,7 @@ useEffect(() => {
   async function find(ev) {
     ev.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/findfriend", {
+      const response = await fetch("https://ease-dmsl.onrender.com/findfriend", {
         method: "POST",
         body: JSON.stringify({ mail2 }),
         headers: { "Content-Type": "application/json" },
@@ -75,7 +75,7 @@ useEffect(() => {
   async function history(ev) {
     ev.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/history", {
+      const response = await fetch("https://ease-dmsl.onrender.com/history", {
         method: "POST",
         body: JSON.stringify({ mail2 }),
         headers: { "Content-Type": "application/json" },
@@ -95,7 +95,7 @@ useEffect(() => {
   async function register(ev) {
     ev.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/friend", {
+      const response = await fetch("https://ease-dmsl.onrender.com/friend", {
         method: "POST",
         body: JSON.stringify({ mail2, mail, owe }),
         headers: { "Content-Type": "application/json" },
